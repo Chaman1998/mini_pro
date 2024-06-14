@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Burst Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text-container">
+        <h1>CS<br><span>Chaman</span></h1>
+        <div class="animated-text">
+            <h2>Thank You</h2>
+            <h2>धन्यवाद</h2>
+            <h2>ধন্যবাদ</h2>
+            <h2>ధన్యవాదాలు</h2>
+            <h2>ಧನ್ಯವಾದ</h2>
+            <h2>ਤੁਹਾਡਾ ਧੰਨਵਾਦ</h2>
+        </div>
+    </div>
+    <div class="animation-container">
+        <div class="brust">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function createBrust() {
+        let animContainer = document.querySelector('.animation-container');
+        let brust = document.querySelector('.brust');
+
+        brust.style.top = Math.random() * 500 + 'px';
+        brust.style.left = Math.random() * 600 + 'px';
+
+        let brustClone = brust.cloneNode(true);
+        animContainer.appendChild(brustClone);
+        setTimeout(() => {
+            brustClone.remove();
+        }, 20000);
+    }
+    setInterval(createBrust, 1000);
+</script>
+
+</html>
