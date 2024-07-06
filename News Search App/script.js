@@ -68,7 +68,7 @@ function displayBlogs(articles) {
         // Description fetch data
         const description = document.createElement("p");
         const truncatedDescription = article.description && article.description.length > 120
-            ? article.description.slice(0, 120) + "...."
+            ? article.description.slice(0, 100) + "...."
             : article.description || "";
         description.textContent = truncatedDescription;
 
