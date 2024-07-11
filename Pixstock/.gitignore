@@ -1,0 +1,6 @@
+# .gitignore
+index.txt
+favicon.svg
+assets/images
+assets/videos
+style-guide.md
